@@ -1,5 +1,5 @@
 # medbikriTask
-type "npm install" in the project directory after cloning it to install all the packages.
+Type "npm install" in the project directory after cloning it to install all the packages.
 To start the server: node server.js, server starts on port 5000
 To view the video details : visit "localhost:5000/videos"
 
