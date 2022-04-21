@@ -6,3 +6,6 @@ To view the video details : visit "localhost:5000/videos"
 Data is obtained from youtube API every 10 seconds and then stored in the local mongodb server.
 When GET request is made to the page "localhost:5000/videos", data stored in the database is obtained and then sent as response to the get request made
 Before the next request is sent to the youtube API, previous data from the server is deleted and the new data is stored in their place so that we have the latest data and we do not run out of storage.
+
+To Search for a particular video: obtain videoTitle from the page "localhost:5000/videos" suppose we call it videoTitle
+Now Type "localhost:5000/videos/videoTitle" in the browser and you can see the details of that video.
