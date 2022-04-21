@@ -78,6 +78,13 @@ app.get('/videos',(req,res) => {
     })
 })
 
+app.get('/videos/:videoTitle', (req,res)=>{
+    Video.findOne({title:req.params.videoTitle}, (err,foundVideo)=>{
+        res.send(foundVideo);
+        
+    })
+})
+
 app.listen(5000,()=>{
     console.log('Listening to port 5000');
 })
