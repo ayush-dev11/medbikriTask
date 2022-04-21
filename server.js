@@ -5,6 +5,8 @@ const bodyParser = require("body-parser")
 const cors = require("cors");
 const mongoose = require("mongoose");
 const axios = require("axios");
+require('dotenv').config()
+
 
 const app = express();
 
@@ -32,7 +34,7 @@ const Video = mongoose.model('Video',videoSchema)
 async function sendRequest(){
     await Video.deleteMany();
 
-    axios.get('https://www.googleapis.com/youtube/v3/search?part=snippet&q=uefa champions league&key=AIzaSyC7UbYfLrwH50HGHcxVIusoOdXqTsxsigs&maxResults=10&order=date&type=video&publishedAfter=2022-04-20T00:00:00Z')
+    axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=uefa champions league&key=${process.env.API_KEY}`)
     .then((res)=>{
         
         let title;
